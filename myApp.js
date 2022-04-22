@@ -41,6 +41,10 @@ app.get("/now", (req,res,next)=> {
     res.json({time:req.time})
 })
 
+app.get("/:word/echo", (req,res)=> {
+    var param = req.params.word
+    res.json({echo:param})
+})
 
 
 
