@@ -5,6 +5,14 @@ console.log("Hello World")
 
 
 
+app.get('/', (req,res) => {
+
+    res.send("response String")
+
+
+
+})
+
 
 
 
