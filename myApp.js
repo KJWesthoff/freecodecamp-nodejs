@@ -51,7 +51,7 @@ app.get("/name", (req,res) => {
     //http://localhost:3000/name?firstname=Johan&lastname=Doe
     var qparams = req.query
     console.log(qparams)
-    res.json(qparams)
+    res.json({ name: `${qparams.firstname} ${qparams.lastname}`})
 })
 
 
