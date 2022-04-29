@@ -59,6 +59,13 @@ app.get("/name", (req,res) => {
 })
 
 
+app.post("/name", (req,res) => {
+    //http://localhost:3000/name
+    var qbody = req.body
+    //console.log(qbody)
+    res.json({ name: `${qbody.first} ${qbody.last}`})
+})
+
 
 
 
