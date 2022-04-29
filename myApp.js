@@ -1,7 +1,10 @@
 var dotenv = require('dotenv').config()
 var express = require('express');
+var bodyParser = require('body-parser')
+
 var app = express();
 var path = require('path')
+
 //console.log("Hello World");
 
 //console.log(path.join(__dirname, "public"))
@@ -14,6 +17,7 @@ app.use((req,res,next) => {
     next()
 })    
 
+app.use(bodyParser.urlencoded({extended:false}))
 
 
 app.get('/', (req,res) => {
