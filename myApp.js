@@ -48,10 +48,10 @@ app.get("/:word/echo", (req,res)=> {
 
 
 app.get("/name", (req,res) => {
-    //http://localhost:3000/name?firstname=Johan&lastname=Doe
+    //http://localhost:3000/name?first=Johan&last=Doe
     var qparams = req.query
     console.log(qparams)
-    res.json({ name: `${qparams.firstname} ${qparams.lastname}`})
+    res.json({ name: `${qparams.first} ${qparams.last}`})
 })
 
 
